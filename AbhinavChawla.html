@@ -8,19 +8,43 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    /* could also use orientation: landscape instead of min-width */
+    /* For desktop and tablet: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
 
 body{
 	background-color: #bcdee7;
 }
 .whiteframe{
-    width: 370px;
+    /* width: 370px; */
     height: 570px;
 
-    position: absolute;
+    /* position: absolute;
     top: calc(50% - 285px);
     bottom: 0;
     left: calc(50% - 185px);
-    right: 0;
+    right: 0; */
 
     background-color: white;
     border-radius: 4px;
@@ -88,14 +112,17 @@ p{
 <!--     height: 100%;
     margin: 0px; -->
 <div class="whiteframe">
-	
-	<img id="profilepic" src="./abhinav.jpg">
-    <h1 id="name">Abhinav Chawla</h1>
-    <h2>Software Developer</h2>
-
-    <p>Hi. My name is Abhinav Chawla. I work at IBM as a software developer. I am currently studying at the University of Toronto and doing a specialist in Computer Science with a major in Mathematics. I am from Amritsar, Punjab in India.</p>
-
-    <div class="footer">
+	<div class="col-4">
+        <img id="profilepic" src="./abhinav.jpg">
+        <h1 id="name">Abhinav Chawla</h1>
+        <h2>Software Developer</h2>
+    </div>
+    <div class="col-9">
+        <p>Hi. My name is Abhinav Chawla. I work at IBM as a software developer. I am currently studying at 
+            the University of Toronto and doing a specialist in Computer Science with a major in Mathematics. 
+            I am from Amritsar, Punjab in India.</p>
+    </div>
+    <div class="footer col-12">
         <i class="icon-space fab fa-facebook-f"></i>
         <i class="icon-space fab fa-twitter"></i>
         <i class="icon-space fab fa-github"></i>
