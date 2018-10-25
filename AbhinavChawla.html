@@ -2,23 +2,50 @@
 <html>
 <!--     height: 100%; -->
 <head>
-<title>My project</title>
+<title>AbhinavProfile</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
 <style>
-* {
+*{
     box-sizing: border-box;
 }
-
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
+    float: left;
+    padding: 15px;
 }
+
+[class*="col-"] {
+/*    float: left;
+    padding: 15px;*/
+    
+}
+
+@media only screen and (max-width: 767px){
+    .whiteframe{background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 0px 14px 3px rgba(0, 0, 0, 0.20);}
+
+    .icon-space{ margin-left: 30px;}
+
+}
+
+.row::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+/*.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}*/
 @media only screen and (min-width: 768px) {
-    /* could also use orientation: landscape instead of min-width */
-    /* For desktop and tablet: */
+    /* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -31,25 +58,25 @@
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+    /*.row {height: 90%;}*/
+    .icon-space{margin-top: 30px;
+                margin-bottom: 30px;}
+
+    .whiteframe{
+    /*height: 550px;*/
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0px 14px 3px rgba(0, 0, 0, 0.20);
+    float: center;}
+
+    .footer{
+    margin-left: 40px;}
+
+
 }
 
 body{
 	background-color: #bcdee7;
-}
-.whiteframe{
-    /* width: 370px; */
-    height: 570px;
-
-    /* position: absolute;
-    top: calc(50% - 285px);
-    bottom: 0;
-    left: calc(50% - 185px);
-    right: 0; */
-
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 0px 14px 3px rgba(0, 0, 0, 0.20);
-
 }
 
 #profilepic {
@@ -64,7 +91,6 @@ body{
     display: block;
     margin: auto;
     margin-top: 40px;
-
 
 }
 #name{
@@ -97,38 +123,38 @@ p{
 .footer{
     text-align: center;
     color: red;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     
 }
 
-.icon-space{
-    margin-left: 30px;
-    margin-right: 30px;
-}
+.icon-space{margin-right: 30px;}
+
+
 </style>
 </head>
 <body>
 <!--     height: 100%;
     margin: 0px; -->
-<div class="whiteframe">
-	<div class="col-4">
-        <img id="profilepic" src="./abhinav.jpg">
-        <h1 id="name">Abhinav Chawla</h1>
-        <h2>Software Developer</h2>
-    </div>
-    <div class="col-9">
-        <p>Hi. My name is Abhinav Chawla. I work at IBM as a software developer. I am currently studying at 
-            the University of Toronto and doing a specialist in Computer Science with a major in Mathematics. 
-            I am from Amritsar, Punjab in India.</p>
-    </div>
-    <div class="footer col-12">
-        <i class="icon-space fab fa-facebook-f"></i>
-        <i class="icon-space fab fa-twitter"></i>
-        <i class="icon-space fab fa-github"></i>
-        <i class="icon-space fab fa-linkedin-in"></i>
-    </div>
-	
+<div class="row">
+    <div class="whiteframe col-7">
+    	<div class="col-4">
+        	<img id="profilepic" src="./abhinav.jpg">
+            <h1 id="name">Abhinav Chawla</h1>
+            <h2>Software Developer</h2>
+        </div>
+
+        <div class="col-5">
+            <p>Hi. My name is Abhinav Chawla. I work at IBM as a software developer. I am currently studying at the University of Toronto and   doing a specialist in Computer Science with a major in Mathematics. I am from Amritsar, Punjab in India.</p>
+        </div>
+
+        <div class="footer col-1">
+            <i class="icon-space fab fa-facebook-f"></i>
+            <i class="icon-space fab fa-twitter"></i>
+            <i class="icon-space fab fa-github"></i>
+            <i class="icon-space fab fa-linkedin-in"></i>
+        </div>
+    </div>	
 </div>
 
 
